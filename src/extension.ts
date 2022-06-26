@@ -64,7 +64,7 @@ export function activate(context: vscode.ExtensionContext) {
 				const items = new Array<CustomInlineCompletionItem>();
 				for (let i=0; i < rs.completions.length; i++) {
 					items.push({
-						text: rs.completions[i],
+						insertText: rs.completions[i],
 						range: new vscode.Range(position.translate(0, rs.completions.length), position),
 						trackingId: `snippet-${i}`,
 					});
@@ -78,7 +78,7 @@ export function activate(context: vscode.ExtensionContext) {
 	vscode.languages.registerInlineCompletionItemProvider({ pattern: "**" }, provider);
 
 	// Be aware that the API around `getInlineCompletionItemController` will not be finalized as is!
-	vscode.window.getInlineCompletionItemController(provider).onDidShowCompletionItem(e => {
-		const id = e.completionItem.trackingId;
-	});
+	// vscode.window.getInlineCompletionItemController(provider).onDidShowCompletionItem(e => {
+	// 	const id = e.completionItem.trackingId;
+	// });
 }
