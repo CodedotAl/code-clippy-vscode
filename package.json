@@ -1,6 +1,6 @@
 {
 	"enabledApiProposals": [
-		"inlineCompletions"
+
 	],
 	"name": "code-clippy",
 	"displayName": "Code Clippy",
@@ -28,11 +28,7 @@
 			}
 		],
 		"menus": {
-			"editor/inlineCompletions/actions": [
-				{
-					"command": "extension.code-clippy-settings"
-				}
-			]
+
 		},
 		"configuration": {
 			"title": "Code Clippy Configuration",
