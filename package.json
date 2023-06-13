@@ -1,6 +1,6 @@
 {
 	"enabledApiProposals": [
-		"inlineCompletions"
+		"inlineCompletionsAdditions"
 	],
 	"name": "code-clippy",
 	"displayName": "Code Clippy",
